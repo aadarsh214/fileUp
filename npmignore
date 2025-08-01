@@ -1,0 +1,9 @@
+src/
+tests/
+demo/
+.github/
+.vscode/
+*.log
+.env
+vite.config.ts
+tsconfig.json

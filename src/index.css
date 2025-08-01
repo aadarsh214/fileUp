@@ -51,24 +51,31 @@
 
 @layer base {
   * {
-    @apply border-neutral-200;
+    border-color: #d1d5db; /* Tailwind border-neutral-300 */
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
 
 /* Glassmorphism utilities */
-@layer utilities {
   .glass {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10;
+    backdrop-filter: blur(24px);
+    background-color: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
   }
   
   .glass-dark {
-    @apply backdrop-blur-xl bg-black/20 border border-white/10;
+    backdrop-filter: blur(24px);
+    background-color: rgba(0,0,0,0.20);
+    border: 1px solid rgba(255,255,255,0.10);
   }
   
   .glass-lime {
-    @apply backdrop-blur-xl bg-lime-500/10 border border-lime-500/20;
+    backdrop-filter: blur(24px);
+    background-color: rgba(132,204,22,0.10); /* lime-500 rgb(132,204,22) */
+    border: 1px solid rgba(132,204,22,0.20);
   }
-}
+  
+  

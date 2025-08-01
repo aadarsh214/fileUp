@@ -1,5 +1,114 @@
 # @file-upload/ui
 
+
+
+# @aadarshg214/file-upload-ui
+
+A config-driven, accessible file upload component library built with React, TypeScript, and Tailwind CSS. Features multiple variants, themes, and real-time configuration editing.
+
+## ✨ Features
+
+[Keep existing features section...]
+
+## 🚀 Quick Start
+
+### Installation
+
+```bash
+npm install @aadarshg214/file-upload-ui
+```
+
+### Basic Usage
+
+```tsx
+import { FileUpload } from '@aadarshg214/file-upload-ui'
+
+function App() {
+  const handleFilesSelected = (files: File[]) => {
+    console.log('Files selected:', files)
+  }
+
+  return (
+    <FileUpload
+      onFilesSelected={handleFilesSelected}
+      config={{
+        variant: 'dropzone',
+        theme: 'modern',
+        maxSize: 10 * 1024 * 1024, // 10MB
+        acceptedTypes: ['image/*', '.pdf']
+      }}
+    />
+  )
+}
+```
+
+## 📋 Component Variants
+
+[Keep existing variants section...]
+
+## 🎨 Configuration System
+
+[Keep existing configuration section...]
+
+## 📦 Installation & Setup
+
+1. Install the package:
+```bash
+npm install @aadarshg214/file-upload-ui
+```
+
+2. Add Tailwind CSS configuration:
+```js
+// tailwind.config.js
+module.exports = {
+  content: [
+    // ...
+    "./node_modules/@aadarshg214/file-upload-ui/**/*.{js,ts,jsx,tsx}",
+  ],
+}
+```
+
+3. Import styles in your app:
+```tsx
+import '@aadarshg214/file-upload-ui/styles'
+```
+
+## 🧪 Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build the library
+npm run build:lib
+
+# Create package
+npm run pack
+```
+
+## 🛠️ Tech Stack
+
+- React 19
+- TypeScript 5.8
+- Tailwind CSS 4.1
+- Vite 7.0
+- Radix UI
+
+## 📝 License
+
+MIT © 
+
+## 📦 Package Information
+
+- Package: [@aadarshg214/file-upload-ui](https://www.npmjs.com/package/@aadarshg214/file-upload-ui)
+- Version: 1.0.0
+- License: MIT
+- Author: Aadarsh Gupta
+- Repository: https://github.com/aadarsh214/fileUp
+
 A config-driven, accessible file upload component library built with React, TypeScript, and Tailwind CSS. Features multiple variants, themes, and real-time configuration editing.
 
 ## ✨ Features

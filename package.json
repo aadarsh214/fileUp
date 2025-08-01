@@ -1,5 +1,5 @@
 {
-  "name": "@file-upload/ui",
+  "name": "@aadarshg214/file-upload-ui",
   "version": "1.0.0",
   "description": "A config-driven, accessible file upload component library",
   "type": "module",
@@ -60,7 +60,7 @@
     "postcss": "^8.5.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.11",
+    "tailwindcss": "^3.3.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4"
