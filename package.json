@@ -1,0 +1,68 @@
+{
+  "name": "@file-upload/ui",
+  "version": "1.0.0",
+  "description": "A config-driven, accessible file upload component library",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/styles.css"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:lib": "tsc && vite build --config vite.lib.config.ts",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "pack": "npm run build:lib && npm pack"
+  },
+  "keywords": [
+    "file-upload",
+    "react",
+    "typescript",
+    "component-library",
+    "accessible",
+    "config-driven",
+    "shadcn",
+    "radix-ui"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@tailwindcss/vite": "^4.1.11",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "postcss": "^8.5.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.35.1",
+    "vite": "^7.0.4"
+  }
+}
