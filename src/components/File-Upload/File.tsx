@@ -25,7 +25,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
 }) => {
   const [files, setFiles] = useState<FileWithPreview[]>([])
   const [isDragOver, setIsDragOver] = useState(false)
-  const [uploading, setUploading] = useState(false)
+  // const [uploading, setUploading] = useState(false) // Removed unused variable
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const validateFile = (file: File): string | null => {
@@ -127,7 +127,6 @@ export const FileUpload: React.FC<FileUploadProps> = ({
   }
 
   const simulateUpload = (file: FileWithPreview) => {
-    setUploading(true)
     let progress = 0
     const interval = setInterval(() => {
       progress += Math.random() * 30
@@ -139,7 +138,6 @@ export const FileUpload: React.FC<FileUploadProps> = ({
             ? { ...f, status: 'success', progress: 100 }
             : f
         ))
-        setUploading(false)
       } else {
         setFiles(prev => prev.map(f => 
           f.id === file.id 

@@ -28,7 +28,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
   const config = { ...defaultConfig, ...configOverrides }
   const [files, setFiles] = useState<FileWithPreview[]>([])
   const [isDragOver, setIsDragOver] = useState(false)
-  const [isUploading, setIsUploading] = useState(false)
+  // const [isUploading, setIsUploading] = useState(false) // Removed unused variable
   const [error, setError] = useState<string>()
   const fileInputRef = useRef<HTMLInputElement>(null)
 

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { FileUpload, defaultConfig, configPresets, getConfigFromJSON, exportConfigToJSON } from '../index'
 import type { FileUploadConfig } from '../types/config'
-import { clearFilesFromStorage } from '../utils/storage'
+// import { clearFilesFromStorage } from '../utils/storage' // Removed unused import
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -18,12 +18,12 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     this.state = { hasError: false }
   }
 
-  static getDerivedStateFromError(error: any): ErrorBoundaryState {
+  static getDerivedStateFromError(_error: any): ErrorBoundaryState {
     return { hasError: true }
   }
 
-  componentDidCatch(error: any, errorInfo: any) {
-    console.error('Error caught by boundary:', error, errorInfo)
+  componentDidCatch(_error: any, _errorInfo: any) {
+    console.error('Error caught by boundary:', _error, _errorInfo)
   }
 
   render() {
@@ -62,13 +62,12 @@ function App() {
     }
   })
   const [configJSON, setConfigJSON] = useState(exportConfigToJSON(currentConfig))
-  const [uploadedFiles, setUploadedFiles] = useState<File[]>([])
+  // const [uploadedFiles, setUploadedFiles] = useState<File[]>([]) // Removed unused variable
   const [activeTab, setActiveTab] = useState<'variants' | 'config'>('variants')
   const [uploadError, setUploadError] = useState<string | null>(null)
 
   const handleFilesSelected = (files: File[]) => {
     try {
-      setUploadedFiles(prev => [...prev, ...files])
       console.log('Files selected:', files)
       setUploadError(null) // Clear any previous errors
     } catch (error) {
@@ -126,15 +125,14 @@ function App() {
     }
   }
 
-  const clearAllData = () => {
-    try {
-      clearFilesFromStorage('fileUpload')
-      setUploadedFiles([])
-      setUploadError(null)
-    } catch (error) {
-      console.error('Error clearing data:', error)
-    }
-  }
+  // const clearAllData = () => {
+  //   try {
+  //     clearFilesFromStorage('fileUpload')
+  //     setUploadError(null)
+  //   } catch (error) {
+  //     console.error('Error clearing data:', error)
+  //   }
+  // }
 
   return (
     <ErrorBoundary>
